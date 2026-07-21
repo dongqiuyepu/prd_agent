@@ -1,0 +1,23 @@
+# TOML configuration for the UI automation test scripts.
+# The fixtures in tests/conftest.py read the [tool.ui_automation] table.
+# pytest settings are still controlled by pytest.ini.
+
+[tool.ui_automation]
+app_port = 5001
+app_url = "http://localhost:5001"
+app_dir = "loan_calculator_app"
+generated_scripts_dir = "generated_scripts"
+generated_tests_dir = "tests/generated"
+start_timeout = 30
+poll_interval = 0.5
+
+[tool.ui_automation.credentials]
+username = "admin"
+password = "password123"
+
+[tool.ui_automation.playwright]
+browser = "chromium"
+headed = true
+slow_mo = 500
+viewport_width = 1280
+viewport_height = 720
